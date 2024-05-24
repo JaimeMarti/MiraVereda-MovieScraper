@@ -162,7 +162,7 @@ public class Main {
         sql = "{ call crear_pelicula_sin_out(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
         int movieIter = 0;
         for(Movie movie: movies) {
-            if(movieIter % 500 == 0) {
+            if(movieIter % 100 == 0) {
                 if(cst != null) {
                     cst.executeBatch();
                     System.out.println("Inserted " + movieIter + " movies");
